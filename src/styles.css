@@ -8,7 +8,7 @@
 }
 
 body {
-  max-width: 1080px;
+  max-width: 1800px;
   margin: auto;
   position: relative;
   display: grid;
@@ -19,6 +19,7 @@ body {
 
 header {
   margin: 3rem;
+  padding: 4rem;
 }
 
 header::before {
@@ -35,7 +36,9 @@ header::before {
 }
 
 #portrait-container {
+  float: left;
   position: relative;
+  margin-right: 1rem;
 }
 
 #portrait-img {
@@ -44,6 +47,7 @@ header::before {
   z-index: 0;
   filter: brightness(85%);
   box-shadow: 1px 2px 5px 0px grey;
+  margin-top: -2rem;
 }
 
 #portrait-name {
@@ -80,6 +84,13 @@ header::before {
   box-shadow: 1px 2px 5px 1px grey;
 }
 
+#about-me-container > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  height: 100%;
+}
+
 #about-me {
   font-weight: 600;
   font-size: 1.5rem;
@@ -101,8 +112,41 @@ header::before {
   color: black;
 }
 
+.socials a:hover {
+  transform: scale(1.5);
+  transition: transform 0.25s ease-in-out;
+}
+
 .devicon-itch-io {
   content: url("../assets/itch.svg");
   transform: translateY(0.1rem);
   height: 1.4rem;
+}
+
+@media (max-width: 1200px) {
+  #portrait-img {
+    width: 15rem;
+    margin-top: -5rem;
+    margin-left: -5rem;
+  }
+  #portrait-name {
+    position: absolute;
+    top: -6.5rem;
+    left: 7rem;
+    width: 20rem;
+  }
+  #about-me-container {
+    height: 15rem;
+  }
+
+  #about-me-container > p {
+    text-align: justify;
+  }
+  #about-me-container > div {
+    display: block;
+  }
+
+  #about-me {
+    text-align: center;
+  }
 }
