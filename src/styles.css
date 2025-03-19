@@ -185,3 +185,77 @@ body {
     height: 1.4rem;
   }
 }
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  header {
+    padding: 10%;
+  }
+
+  header::before {
+    content: "";
+    width: 100vw;
+    height: 800px;
+    position: absolute;
+    top: -500px;
+    left: 0;
+    background-color: var(--primary-color);
+    z-index: -1;
+    transform: skewY(-10deg);
+    box-shadow: 0px 2px 10px 0px grey;
+  }
+
+  #portrait-img {
+    width: auto;
+    height: 30vh;
+    z-index: 0;
+    filter: brightness(85%);
+    box-shadow: 1px 2px 5px 0px grey;
+    margin-right: 1rem;
+    margin-top: -5vh;
+  }
+
+  #portrait-container {
+    float: left;
+  }
+
+  #portrait-name {
+    position: absolute;
+    width: 50vw;
+    color: white;
+    z-index: 2;
+    font-weight: 200;
+    font-family: "PlayfairDisplay";
+
+    text-align: left;
+    font-size: 2rem;
+    top: -3rem;
+    left: 87%;
+  }
+
+  #about-me-container {
+    text-align: justify;
+    width: 100%;
+    background-color: white;
+    padding: 1rem;
+    box-shadow: 1px 2px 5px 1px grey;
+  }
+
+  .socials {
+    display: flex;
+    gap: 1rem;
+    justify-content: flex-end;
+    align-items: baseline;
+    font-size: 1.4rem;
+  }
+
+  .socials a {
+    text-decoration: none;
+    color: black;
+  }
+
+  .devicon-itch-io {
+    content: url("../assets/itch.svg");
+    transform: translateY(0.1rem);
+    height: 1.4rem;
+  }
+}
