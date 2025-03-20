@@ -53,16 +53,16 @@ export const projects = [
     "Weather app",
     "Classic weather app . Wrapper around Visual Crossing API. " +
       " Implemented using pure javascript, highlights interacting with external APIs. ",
-    "https://github.com/BhargavPabbaraju/odin-weather",
-    "https://bhargavpabbaraju.github.io/odin-weather/",
+    "https://github.com/BhargavPabbaraju/odin-weather-app",
+    "https://bhargavpabbaraju.github.io/odin-weather-app/",
     weather,
   ),
   new Project(
     "Todo manager",
     "A todo app to manage projects and todo-lists per project." +
       " Implemented using pure javascript, this project supports local cache. ",
-    "https://github.com/BhargavPabbaraju/odin-battleship",
-    "https://bhargavpabbaraju.github.io/odin-battleship/",
+    "https://github.com/BhargavPabbaraju/odin-todo",
+    "https://bhargavpabbaraju.github.io/odin-todo/",
     todo,
   ),
   new Project(

@@ -22,6 +22,7 @@ function renderProject(project) {
   div.appendChild(img);
 
   const row = document.createElement("div");
+  row.classList.add("project-row");
   div.appendChild(row);
 
   const name = document.createElement("span");

@@ -1,25 +1,39 @@
+#my-work {
+  text-align: left;
+  font-weight: 600;
+  font-size: 1.5rem;
+  color: rgb(85, 85, 85);
+  font-family: "PlayfairDisplay";
+}
+
 #projects {
   display: grid;
-  grid-template-columns: 1fr;
   gap: 4rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  grid-auto-rows: 1fr;
+  align-items: stretch;
 }
 
 .project {
   display: flex;
   flex-direction: column;
   box-shadow: 1px 2px 8px 2px grey;
+  height: 100%;
 }
 
-.project > div {
+.project-row,
+.project-desc {
   display: flex;
   justify-content: space-between;
   padding: 1rem;
   hyphens: auto;
   text-align: justify;
+  align-items: center;
 }
 
 .project-desc {
-  margin-top: -1rem;
+  flex-grow: 1;
+  margin-top: -2rem;
   color: gray;
 }
 
@@ -30,8 +44,9 @@
 }
 
 .project > img {
+  height: 250px;
+  object-fit: cover;
   width: 100%;
-  height: 100%;
 }
 
 .project-links {
@@ -61,6 +76,10 @@
 @media (max-width: 600px) {
   main {
     padding: 10%;
+  }
+  #my-work {
+    font-size: 2rem;
+    text-align: center;
   }
 }
 
