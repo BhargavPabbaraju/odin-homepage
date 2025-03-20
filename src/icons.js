@@ -1,5 +1,7 @@
 export const icons = {
   OPEN_IN_NEW: "open_in_new",
+  CALL: "call",
+  MAIL: "mail",
 };
 
 export function renderIcon(iconText, iconLink = null, external = false) {

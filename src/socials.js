@@ -14,6 +14,8 @@ export const SOCIALS = {
     name: "Itch",
     link: "https://bhargavpabbaraju.itch.io/",
   },
+  PHONE: "555-555-5555",
+  MAIL: "thisid.is.not.real@gmail.com",
 };
 
 export function renderSocial(social, customLink = null) {

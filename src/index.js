@@ -60,11 +60,28 @@ function renderProjects() {
   });
 }
 
+function renderContactInfo() {
+  const phone = document.getElementById("phone-no");
+  phone.replaceChildren();
+  phone.appendChild(renderIcon(icons.CALL));
+  const ph = document.createElement("span");
+  ph.innerText = socials.SOCIALS.PHONE;
+  phone.appendChild(ph);
+
+  const mail = document.getElementById("email");
+  mail.replaceChildren();
+  mail.appendChild(renderIcon(icons.MAIL));
+  const m = document.createElement("span");
+  m.innerText = socials.SOCIALS.MAIL;
+  mail.appendChild(m);
+}
+
 function renderInitialContent() {
   renderImage("portrait-img", portraitImg);
   renderImage("code-img", codeImg);
   socials.renderSocials();
   renderProjects();
+  renderContactInfo();
 }
 
 renderInitialContent();
