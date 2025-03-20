@@ -4,6 +4,8 @@ import "./project-styles.css";
 import "./footer-styles.css";
 
 import portraitImg from "../assets/portrait.jpg";
+import codeImg from "../assets/code-1.png";
+import codeImg2 from "../assets/code-2.png";
 import * as socials from "./socials";
 import { projects } from "./projects";
 import { icons, renderIcon } from "./icons";
@@ -60,8 +62,24 @@ function renderProjects() {
 
 function renderInitialContent() {
   renderImage("portrait-img", portraitImg);
+  renderImage("code-img", codeImg);
   socials.renderSocials();
   renderProjects();
 }
 
 renderInitialContent();
+
+function changeCodeImage(query) {
+  console.log(query);
+  if (query.matches) {
+    renderImage("code-img", codeImg2);
+  } else {
+    renderImage("code-img", codeImg);
+  }
+}
+
+var query = window.matchMedia("(min-width: 1200px)");
+changeCodeImage(query);
+query.addEventListener("change", function () {
+  changeCodeImage(query);
+});
