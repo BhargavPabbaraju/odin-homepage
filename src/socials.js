@@ -1,4 +1,4 @@
-const SOCIALS = {
+export const SOCIALS = {
   GITHUB: {
     icon: "devicon-github-original",
     name: "Github",
@@ -16,13 +16,14 @@ const SOCIALS = {
   },
 };
 
-function renderSocial(social) {
+export function renderSocial(social, customLink = null) {
   const i = document.createElement("i");
   i.classList.add(social.icon);
   i.classList.add("dev-icon");
 
   const link = document.createElement("a");
-  link.href = social.link;
+
+  link.href = customLink === null ? social.link : customLink;
 
   link.appendChild(i);
 

@@ -1,0 +1,77 @@
+#projects {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 4rem;
+}
+
+.project {
+  display: flex;
+  flex-direction: column;
+  box-shadow: 1px 2px 8px 2px grey;
+}
+
+.project > div {
+  display: flex;
+  justify-content: space-between;
+  padding: 1rem;
+  hyphens: auto;
+  text-align: justify;
+}
+
+.project-desc {
+  margin-top: -1rem;
+  color: gray;
+}
+
+.project-name {
+  font-family: "PlayfairDisplay";
+  font-weight: 400;
+  color: black;
+}
+
+.project > img {
+  width: 100%;
+  height: 100%;
+}
+
+.project-links {
+  display: flex;
+  gap: 1rem;
+  justify-content: flex-end;
+  align-items: baseline;
+  font-size: 1.4rem;
+}
+
+.project-links > a:hover {
+  transition: transform 0.25s ease-in-out;
+  transform: scale(1.5);
+}
+
+.project-github,
+.project-preview {
+  text-decoration: none;
+  color: black;
+  margin: auto;
+}
+
+.project-preview {
+  transform: translateY(1px);
+}
+
+@media (max-width: 600px) {
+  main {
+    padding: 10%;
+  }
+}
+
+@media (min-width: 600px) and (max-width: 1200px) {
+  main {
+    padding: 10%;
+  }
+}
+
+@media (min-width: 1200px) {
+  main {
+    padding: 5%;
+  }
+}
